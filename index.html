@@ -147,6 +147,20 @@
     .proof strong { display: block; font-family: "Space Grotesk", sans-serif; font-size: 1.15rem; }
     .proof span { color: var(--muted); font-size: 0.95rem; }
 
+    /* About */
+    .about { display: grid; grid-template-columns: 280px 1fr; gap: 48px; margin-top: 48px; align-items: start; }
+    .profile { text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px 24px; }
+    .avatar { width: 112px; height: 112px; border-radius: 50%; margin: 0 auto 18px; display: grid; place-items: center; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 2.4rem; color: #0b1020; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+    .profile h3 { font-family: "Space Grotesk", sans-serif; font-size: 1.4rem; }
+    .profile .role { color: var(--accent-2); font-weight: 500; margin-top: 4px; }
+    .facts { list-style: none; margin-top: 24px; text-align: left; border-top: 1px solid var(--border); padding-top: 18px; }
+    .facts li { padding: 8px 0; color: var(--muted); font-size: 0.95rem; }
+    .facts strong { display: block; color: var(--text); font-family: "Space Grotesk", sans-serif; font-size: 1.1rem; }
+    .bio p { color: var(--muted); font-size: 1.05rem; margin-bottom: 18px; }
+    .bio p strong { color: var(--text); font-weight: 600; }
+    .bio .lead { color: var(--text); font-size: 1.2rem; }
+    @media (max-width: 820px) { .about { grid-template-columns: 1fr; gap: 28px; } }
+
     .alt { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .steps { counter-reset: step; }
     .step-num { font-family: "Space Grotesk", sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--accent-2); margin-bottom: 14px; }
@@ -186,6 +200,7 @@
         <a href="#name">Our name</a>
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
+        <a href="#about">About</a>
         <a href="#contact" class="btn btn-primary">Get in touch</a>
       </nav>
     </div>
@@ -367,6 +382,32 @@
             <div class="step-num">04 — Deploy</div>
             <h3>Ship and support</h3>
             <p>Production-ready systems with monitoring and evaluation, so they keep performing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="alt">
+      <div class="wrap">
+        <div class="section-label">About</div>
+        <h2>Semiconductor experience behind every agent</h2>
+        <div class="about">
+          <aside class="profile">
+            <div class="avatar" aria-hidden="true">JD</div>
+            <h3>Jeff David</h3>
+            <div class="role">Founder, Levagi</div>
+            <ul class="facts">
+              <li><strong>100+ granted US patents</strong>Including Applied Materials' 2008 Patent of the Year</li>
+              <li><strong>Fab to test</strong>Process equipment, defect classification, and multi-insertion test data</li>
+              <li><strong>ML in production</strong>Systems shipped and running with semiconductor customers</li>
+            </ul>
+          </aside>
+          <div class="bio">
+            <p class="lead">Jeff has spent his career where semiconductor manufacturing meets data, building the machine learning and AI that help engineers find answers faster.</p>
+            <p>At <strong>Applied Materials</strong>, he worked on semiconductor process equipment, leading product integration with technology partners to meet demanding engineering specifications. He is an inventor on more than 100 granted US patents across his career, including Applied Materials' 2008 Patent of the Year.</p>
+            <p>At <strong>StreamMosaic</strong>, he partnered with product, test, reliability, and manufacturing teams at a leading chipmaker to apply machine learning across multi-insertion test data, from parametric and wafer probe through final and system-level test, for test reduction, yield prediction, and predictive burn-in, carried all the way to production release.</p>
+            <p>At <strong>PDF Solutions</strong>, he developed and productized wafer-level defect classification and automatic defect classification (ADC) systems designed to learn from small amounts of data, delivered MLOps solutions that went into production with customers, and built early agentic AI prototypes. At both StreamMosaic and PDF Solutions, he worked closely with OSATs and partners across the supply chain.</p>
+            <p>Jeff founded Levagi to bring that experience to custom AI agents built for the semiconductor industry and designed to fit the systems you already run.</p>
           </div>
         </div>
       </div>
