@@ -130,6 +130,21 @@
     .name-detail .card h3 span { color: var(--accent-2); }
     .name-close { margin-top: 40px; font-size: 1.15rem; color: var(--text); max-width: 720px; }
 
+    /* Semiconductor focus */
+    .stages { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .stage { font-size: 0.85rem; color: var(--text); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; background: var(--card); }
+    .stage b { color: var(--accent-2); font-weight: 600; margin-right: 6px; }
+    .agents { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px; }
+    .agent { display: flex; flex-direction: column; }
+    .agent .tag { align-self: flex-start; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-2); background: rgba(52,211,180,0.1); border-radius: 6px; padding: 4px 10px; margin-bottom: 16px; }
+    .agent .why { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border); }
+    .agent .why-label { font-size: 0.8rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; }
+    .agent .why ul { margin-top: 4px; }
+    .proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 40px; }
+    .proof div { border-left: 2px solid var(--accent); padding: 4px 0 4px 16px; }
+    .proof strong { display: block; font-family: "Space Grotesk", sans-serif; font-size: 1.15rem; }
+    .proof span { color: var(--muted); font-size: 0.95rem; }
+
     .alt { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .steps { counter-reset: step; }
     .step-num { font-family: "Space Grotesk", sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--accent-2); margin-bottom: 14px; }
@@ -165,6 +180,7 @@
         Levagi
       </a>
       <nav class="nav-links">
+        <a href="#semiconductors">Semiconductors</a>
         <a href="#name">Our name</a>
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
@@ -225,7 +241,73 @@
       </div>
     </section>
 
-    <section id="services">
+    <section id="semiconductors">
+      <div class="wrap">
+        <div class="section-label">Industry focus</div>
+        <h2>Built for the semiconductor industry</h2>
+        <p class="section-intro">Our initial focus, and our deepest expertise, is semiconductor manufacturing. We know the tools, the test flows, and the data formats, and we have already built AI agents that turn raw fab and test data into engineering answers.</p>
+
+        <div class="stages" aria-label="Where our agents work">
+          <span class="stage"><b>01</b>Front-end fab processing</span>
+          <span class="stage"><b>02</b>Wafer sort</span>
+          <span class="stage"><b>03</b>Package &amp; module test</span>
+          <span class="stage"><b>04</b>System-level test</span>
+        </div>
+
+        <div class="agents">
+          <div class="card agent">
+            <span class="tag">Fab processing</span>
+            <h3>Process Tool Log Agent</h3>
+            <p>Reads raw equipment logs from front-end fabrication process tools and produces a per-lot analysis: endpoint behavior, step times, consumables, alarms, queue times, and in-line metrology.</p>
+            <div class="why">
+              <div class="why-label">What stands out</div>
+              <ul>
+                <li>Works directly on raw tool logs, no manual data prep</li>
+                <li>Flags process issues and recommends corrective actions</li>
+                <li>Full lot report in about a minute</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card agent">
+            <span class="tag">Silicon photonics</span>
+            <h3>Optical Test Analysis Agent</h3>
+            <p>Analyzes test data for photonic integrated circuits, co-packaged optics, and optical engines at wafer sort, post-fiber-attach, package, and module test: yield, pass/fail review, and failure diagnosis.</p>
+            <div class="why">
+              <div class="why-label">What stands out</div>
+              <ul>
+                <li>Covers the full optical test flow, from wafer to module</li>
+                <li>Diagnoses why parts fail, not just how many</li>
+                <li>Complete test report, with wafer maps on request</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card agent">
+            <span class="tag">System-level test</span>
+            <h3>SLT Analysis Agents</h3>
+            <p>Two agents working in sequence: one parses industry-standard STDF V4 tester datalogs, the other writes a per-lot report on data integrity, yield, bins, failing units, site and retest effects, and test capability.</p>
+            <div class="why">
+              <div class="why-label">What stands out</div>
+              <ul>
+                <li>A multi-agent pipeline, from binary datalog to report</li>
+                <li>Surfaces likely causes and corrective actions</li>
+                <li>Catches site-to-site and retest effects automatically</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="proof">
+          <div><strong>Raw data in</strong><span>Tool logs and tester datalogs, read as-is</span></div>
+          <div><strong>Answers out</strong><span>Root causes and corrective actions, not just charts</span></div>
+          <div><strong>About a minute</strong><span>For a full engineering report</span></div>
+          <div><strong>Runs locally</strong><span>Your fab and test data stays in-house</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="alt">
       <div class="wrap">
         <div class="section-label">Services</div>
         <h2>Two ways we help teams put AI to work</h2>
@@ -258,7 +340,7 @@
       </div>
     </section>
 
-    <section id="approach" class="alt">
+    <section id="approach">
       <div class="wrap">
         <div class="section-label">Approach</div>
         <h2>From idea to production, without the guesswork</h2>
