@@ -150,7 +150,8 @@
     /* About */
     .about { display: grid; grid-template-columns: 280px 1fr; gap: 48px; margin-top: 48px; align-items: start; }
     .profile { text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px 24px; }
-    .avatar { width: 112px; height: 112px; border-radius: 50%; margin: 0 auto 18px; display: grid; place-items: center; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 2.4rem; color: #0b1020; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+    .avatar { width: 168px; height: 168px; border-radius: 50%; margin: 0 auto 20px; padding: 4px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 12px 40px rgba(124,156,255,0.25); }
+    .avatar img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid var(--card); }
     .profile h3 { font-family: "Space Grotesk", sans-serif; font-size: 1.4rem; }
     .profile .role { color: var(--accent-2); font-weight: 500; margin-top: 4px; }
     .facts { list-style: none; margin-top: 24px; text-align: left; border-top: 1px solid var(--border); padding-top: 18px; }
@@ -393,7 +394,7 @@
         <h2>Semiconductor experience behind every agent</h2>
         <div class="about">
           <aside class="profile">
-            <div class="avatar" aria-hidden="true">JD</div>
+            <div class="avatar"><img src="images/jeff-david.jpg" alt="Jeff David, founder of Levagi" width="320" height="320" loading="lazy"></div>
             <h3>Jeff David</h3>
             <div class="role">Founder, Levagi</div>
             <ul class="facts">
